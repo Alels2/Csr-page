@@ -1,0 +1,309 @@
+# Tworzymy plik TXT z pełnym opisem najważniejszych tagów HTML, ich działania i przykładów użycia
+
+html_explained = """
+📘 KOMPLETNY PRZEWODNIK PO TAGACH HTML (PLIK EDUKACYJNY)
+
+Ten plik możesz otworzyć w VS Code lub Notatniku, aby uczyć się HTML krok po kroku. 
+Każdy tag jest opisany, z przykładem użycia i sytuacją, kiedy warto go stosować.
+
+
+──────────────────────────────
+1️⃣ STRUKTURA DOKUMENTU HTML
+──────────────────────────────
+
+<!DOCTYPE html>
+➡️ Określa typ dokumentu HTML5. Musi być zawsze pierwszą linią kodu.
+✅ Przykład użycia:
+    <!DOCTYPE html>
+💡 Użycie: zawsze na górze strony – informuje przeglądarkę, że kod jest w HTML5.
+
+
+<html lang="pl">
+➡️ Główny kontener całej strony. Wszystko musi znajdować się w jego środku.
+Atrybut „lang” ustawia język strony (np. "pl", "en").
+✅ Przykład użycia:
+    <html lang="pl">
+        ...treść strony...
+    </html>
+💡 Użycie: zawsze otacza cały dokument.
+
+
+<head>
+➡️ Zawiera dane techniczne strony (niewidoczne dla użytkownika).
+✅ Przykład użycia:
+    <head>
+        <title>Tytuł</title>
+    </head>
+💡 Użycie: meta dane, tytuł, linki do CSS i JS.
+
+
+<body>
+➡️ Część widoczna dla użytkownika — cała zawartość strony.
+✅ Przykład użycia:
+    <body>
+        <h1>Witaj!</h1>
+    </body>
+💡 Użycie: nagłówki, tekst, zdjęcia, menu, przyciski itd.
+
+
+──────────────────────────────
+2️⃣ ELEMENTY W <head>
+──────────────────────────────
+
+<title>
+➡️ Ustawia tytuł strony widoczny na karcie przeglądarki.
+✅ Przykład:
+    <title>Moja strona domowa</title>
+
+<meta charset="UTF-8">
+➡️ Ustawia kodowanie znaków (żeby działały polskie litery).
+✅ Przykład:
+    <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+➡️ Sprawia, że strona dobrze wygląda na telefonach.
+✅ Przykład:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Opis mojej strony">
+➡️ Opis strony (dla wyszukiwarek).
+✅ Przykład:
+    <meta name="description" content="Blog o HTML i CSS.">
+
+<link rel="stylesheet" href="style.css">
+➡️ Łączy stronę z plikiem CSS (style).
+✅ Przykład:
+    <link rel="stylesheet" href="style.css">
+
+<script src="main.js"></script>
+➡️ Łączy stronę z plikiem JavaScript (interaktywność).
+✅ Przykład:
+    <script src="main.js"></script>
+
+
+──────────────────────────────
+3️⃣ NAGŁÓWKI I TEKST
+──────────────────────────────
+
+<h1> – <h6>
+➡️ Nagłówki od najważniejszego (H1) do najmniejszego (H6).
+✅ Przykład:
+    <h1>Tytuł główny</h1>
+    <h2>Podtytuł</h2>
+💡 Użycie: H1 tylko raz na stronę (tytuł główny).
+
+<p>
+➡️ Akapit tekstu.
+✅ Przykład:
+    <p>To jest akapit tekstu.</p>
+💡 Użycie: zwykły tekst lub opis.
+
+<br>
+➡️ Nowa linia (złamanie tekstu).
+✅ Przykład:
+    Tekst pierwszej linii<br>Tekst drugiej linii
+
+<strong> / <b>
+➡️ Pogrubienie tekstu. <strong> – semantyczne (ważny tekst), <b> – wizualne.
+✅ Przykład:
+    <strong>Uwaga!</strong> To jest ważne.
+
+<em> / <i>
+➡️ Kursywa (pochylenie tekstu). <em> ma znaczenie semantyczne.
+✅ Przykład:
+    <em>Ważne słowo</em>
+
+<u>
+➡️ Podkreślenie tekstu.
+✅ Przykład:
+    <u>Podkreślony tekst</u>
+
+
+──────────────────────────────
+4️⃣ LINKI I OBRAZKI
+──────────────────────────────
+
+<a href="adres">Tekst</a>
+➡️ Tworzy link do innej strony.
+✅ Przykład:
+    <a href="https://example.com">Odwiedź stronę</a>
+💡 Użycie: linki, przyciski, nawigacja.
+
+<img src="obrazek.jpg" alt="Opis obrazu">
+➡️ Wstawia obrazek.
+✅ Przykład:
+    <img src="logo.png" alt="Logo strony">
+💡 Atrybut alt pokazuje tekst, gdy obrazek się nie wczyta.
+
+
+──────────────────────────────
+5️⃣ STRUKTURA STRONY (UKŁAD)
+──────────────────────────────
+
+<header>
+➡️ Górna część strony (logo, tytuł, menu).
+✅ Przykład:
+    <header><h1>Moje Portfolio</h1></header>
+
+<nav>
+➡️ Nawigacja – menu z linkami.
+✅ Przykład:
+    <nav>
+        <a href="#home">Start</a>
+        <a href="#about">O mnie</a>
+    </nav>
+
+<main>
+➡️ Główna zawartość strony.
+✅ Przykład:
+    <main><p>Treść główna</p></main>
+
+<section>
+➡️ Sekcja tematyczna strony.
+✅ Przykład:
+    <section>
+        <h2>O mnie</h2>
+        <p>Krótki opis.</p>
+    </section>
+
+<article>
+➡️ Samodzielny artykuł (np. wpis blogowy).
+✅ Przykład:
+    <article>
+        <h2>Tytuł artykułu</h2>
+        <p>Treść artykułu...</p>
+    </article>
+
+<footer>
+➡️ Stopka strony (np. prawa autorskie, linki kontaktowe).
+✅ Przykład:
+    <footer>&copy; 2025 Moja Strona</footer>
+
+<div>
+➡️ Uniwersalny kontener (do grupowania elementów).
+✅ Przykład:
+    <div class="box">Zawartość</div>
+
+<span>
+➡️ Mały fragment tekstu (inline), np. do stylowania.
+✅ Przykład:
+    <p>To jest <span style="color:red;">ważne</span>.</p>
+
+
+──────────────────────────────
+6️⃣ LISTY I TABELE
+──────────────────────────────
+
+<ul> / <ol> / <li>
+➡️ Tworzy listy (ul = kropki, ol = numerowana).
+✅ Przykład:
+    <ul>
+        <li>Pierwszy punkt</li>
+        <li>Drugi punkt</li>
+    </ul>
+
+<table>, <tr>, <th>, <td>
+➡️ Tworzy tabelę danych.
+✅ Przykład:
+    <table>
+        <tr><th>Imię</th><th>Wiek</th></tr>
+        <tr><td>Jan</td><td>13</td></tr>
+    </table>
+
+
+──────────────────────────────
+7️⃣ FORMULARZE
+──────────────────────────────
+
+<form>
+➡️ Tworzy formularz (np. logowanie, kontakt).
+✅ Przykład:
+    <form action="send.php" method="post">
+        <input type="text" name="imie">
+        <button>Wyślij</button>
+    </form>
+
+<input>
+➡️ Pole formularza (tekst, hasło, checkbox itp.).
+✅ Przykład:
+    <input type="email" placeholder="Twój e-mail">
+
+<textarea>
+➡️ Duże pole tekstowe.
+✅ Przykład:
+    <textarea>Twoja wiadomość</textarea>
+
+<select> i <option>
+➡️ Lista rozwijana.
+✅ Przykład:
+    <select>
+        <option>Opcja 1</option>
+        <option>Opcja 2</option>
+    </select>
+
+<button>
+➡️ Przycisk.
+✅ Przykład:
+    <button type="submit">Wyślij</button>
+
+
+──────────────────────────────
+8️⃣ MULTIMEDIA
+──────────────────────────────
+
+<video src="film.mp4" controls></video>
+➡️ Wstawia film wideo.
+
+<audio src="muzyka.mp3" controls></audio>
+➡️ Wstawia odtwarzacz dźwięku.
+
+<iframe src="https://www.youtube.com/embed/..."></iframe>
+➡️ Osadza inny element (np. film z YouTube).
+
+
+──────────────────────────────
+9️⃣ INNE CIEKAWE TAGI
+──────────────────────────────
+
+<details> + <summary>
+➡️ Tworzy rozwijaną sekcję.
+✅ Przykład:
+    <details>
+        <summary>Kliknij, aby zobaczyć więcej</summary>
+        <p>Ukryty tekst</p>
+    </details>
+
+<progress value="70" max="100"></progress>
+➡️ Pasek postępu.
+
+<meter value="0.6"></meter>
+➡️ Pokazuje wartość w zakresie (np. poziom).
+
+<code> i <pre>
+➡️ Wyświetla kod komputerowy w formacie tekstowym.
+✅ Przykład:
+    <pre><code>print("Hello World")</code></pre>
+
+<blockquote>
+➡️ Cytat blokowy.
+✅ Przykład:
+    <blockquote>To jest cytat.</blockquote>
+
+
+──────────────────────────────
+🔚 PODSUMOWANIE
+──────────────────────────────
+
+HTML to szkielet strony.
+- <head> zawiera dane i ustawienia.
+- <body> zawiera widoczną treść.
+- CSS nadaje wygląd.
+- JS dodaje interaktywność.
+
+"""
+
+# Zapisujemy plik
+with open("/mnt/data/html_przewodnik.txt", "w", encoding="utf-8") as f:
+    f.write(html_explained)
+
+"/mnt/data/html_przewodnik.txt"
